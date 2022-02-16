@@ -3,6 +3,9 @@ import Home from './components/Home'
 import MyNavbar from './components/MyNavbar'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Booking from './components/Booking'
+import Menu from './components/Menu'
+import NotFound from './components/NotFound'
+import PastaDetails from './components/PastaDetails'
 
 // in App we're going to declare different Route components
 // what is a Route? is a separate component that mounts its content
@@ -23,7 +26,9 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/reservations' element={<Booking />} />
-        <Route path='*' element={<div>404</div>} />
+        <Route path='/menu' element={<Menu />} />
+        <Route path='/details/:pastaId' element={<PastaDetails />} />
+        <Route path='*' element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   )
