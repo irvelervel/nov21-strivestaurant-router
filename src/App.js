@@ -6,6 +6,7 @@ import Booking from './components/Booking'
 import Menu from './components/Menu'
 import NotFound from './components/NotFound'
 import PastaDetails from './components/PastaDetails'
+import ClassComponent from './components/ClassComponent'
 
 // in App we're going to declare different Route components
 // what is a Route? is a separate component that mounts its content
@@ -27,6 +28,7 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/reservations' element={<Booking />} />
         <Route path='/menu' element={<Menu />} />
+        <Route path='/class' element={<ClassComponent />} />
         <Route path='/details/:pastaId' element={<PastaDetails />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
